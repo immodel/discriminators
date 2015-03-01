@@ -23,6 +23,7 @@
   "devDependencies": {
     "chai": "^2.1.0",
     "mocha": "^2.1.0",
-    "models": "git://github.com/immodel/immodel"
+    "models": "git://github.com/immodel/immodel",
+    "immodel": "git://github.com/immodel/immodel"
   }
 }
