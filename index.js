@@ -8,7 +8,7 @@ module.exports = function(model) {
         if(types.indexOf(key) !== -1) {
           var type = model.lookup(key);
           if(! (doc instanceof type)) {
-            evt.doc = type(doc.doc);
+            evt.doc = new type(doc.doc);
           }
         }
       });
