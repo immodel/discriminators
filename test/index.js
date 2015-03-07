@@ -1,5 +1,6 @@
 var assert = require('assert');
-var model = require('immodel').bootstrap({discriminators: require('../')});
+var model = require('immodel')
+  .use(require('base', {discriminators: require('..')}));
 
 describe('discriminators', function() {
   it('should work', function() {
