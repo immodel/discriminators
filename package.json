@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/immodel/discriminators"
+    "url": "immodel/discriminators"
   },
   "keywords": [
     "discriminators",
@@ -17,13 +17,11 @@
   "author": "ashaffer (http://github.com/ashaffer)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/immodel/discriminators/issues"
+    "url": "http://github.com/immodel/discriminators/issues"
   },
   "homepage": "https://github.com/immodel/discriminators",
   "devDependencies": {
-    "chai": "^2.1.0",
     "mocha": "^2.1.0",
-    "models": "git://github.com/immodel/immodel",
     "immodel": "git://github.com/immodel/immodel"
   }
 }

@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+var assert = require('assert');
 var model = require('immodel').bootstrap({discriminators: require('../')});
 
 describe('discriminators', function() {
@@ -19,19 +19,19 @@ describe('discriminators', function() {
     
     var doc = new User({userType: 'teacher'});
     
-    expect(doc.get('username')).to.equal('');
-    expect(doc.get('subject')).to.equal('');
-    expect(doc.get('grade')).to.equal(undefined);
+    assert(doc.get('username') === '');
+    assert(doc.get('subject') === '');
+    assert(doc.get('grade') === undefined);
     
     doc = new User({});
-    expect(doc.get('username')).to.equal('');
-    expect(doc.get('subject')).to.equal(undefined);
-    expect(doc.get('grade')).to.equal(undefined);
+    assert(doc.get('username') === '');
+    assert(doc.get('subject') === undefined);
+    assert(doc.get('grade') === undefined);
     
     doc = new User({userType: 'student'});
-    expect(doc.get('username')).to.equal('');
-    expect(doc.get('subject')).to.equal(undefined);
-    expect(doc.get('grade')).to.equal(0);
+    assert(doc.get('username') === '');
+    assert(doc.get('subject') === undefined);
+    assert(doc.get('grade') === 0);
   });
   
   it('should work on nested documents', function() {
@@ -53,21 +53,21 @@ describe('discriminators', function() {
       .type('video');
       
     var doc = new Share({object: {}});
-    
-    expect(doc.get('object.content')).to.equal('');
-    expect(doc.get('object.answer')).to.equal(undefined);
-    expect(doc.get('object.url')).to.equal(undefined);
+
+    assert(doc.get('object.content') === '');
+    assert(doc.get('object.answer') === undefined);
+    assert(doc.get('object.url') === undefined);    
     
     doc = new Share({object: {objectType: 'question'}});
 
-    expect(doc.get('object.content')).to.equal('');
-    expect(doc.get('object.answer')).to.equal('');
-    expect(doc.get('object.url')).to.equal(undefined);
+    assert(doc.get('object.content') === '');
+    assert(doc.get('object.answer') === '');
+    assert(doc.get('object.url') === undefined);
     
     doc = new Share({object: {objectType: 'video'}});
-    
-    expect(doc.get('object.content')).to.equal('');
-    expect(doc.get('object.answer')).to.equal(undefined);
-    expect(doc.get('object.url')).to.equal(''); 
+
+    assert(doc.get('object.content') === '');
+    assert(doc.get('object.answer') === undefined);
+    assert(doc.get('object.url') === ''); 
   });
 });
