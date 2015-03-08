@@ -1,6 +1,6 @@
 var assert = require('assert');
 var model = require('immodel')
-  .use(require('base', {discriminators: require('..')}));
+  .use(require('immodel-base', {discriminators: require('..')}));
 
 describe('discriminators', function() {
   it('should work', function() {

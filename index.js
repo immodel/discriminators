@@ -1,7 +1,8 @@
-module.exports = function(model) {
-  model.discriminator = function(prop, types) {
-    return this.use(function(doc) {
-      doc.on('init', function(evt) {
+module.exports = function() {
+  this.discriminator = function(prop, types) {
+    return this.use(function() {
+      var model = this;
+      this.on('init', function(evt) {
         var doc = evt.doc;
         var key = doc.get(prop);
 
