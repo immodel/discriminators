@@ -25,8 +25,5 @@
     "immodel": "git://github.com/immodel/immodel",
     "base": "git://github.com/immodel/base",
     "immodel-base": "git://github.com/immodel/base"
-  },
-  "dependencies": {
-    "immodel-base": "file:../../../../tmp/npm-27530-e923f760/git-cache-717f7d8a216d/8b1167aec5fb10b71312fcf91f481e574a2d47b9"
   }
 }
