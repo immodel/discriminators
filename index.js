@@ -4,7 +4,7 @@ module.exports = function() {
       var model = this;
       this.on('init', function(evt) {
         var doc = evt.doc;
-        var key = doc.get(prop);
+        var key = doc.get(prop).value;
 
         if(types.indexOf(key) !== -1) {
           var type = model.lookup(key);
